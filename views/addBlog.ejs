@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%- include('./partials/head') %>
+    <title>Blogify!</title>
+  </head>
+  <body>
+    <%- include("./partials/nav") %>
+    <div class="container mt-4">
+       
+        <form action="/blog" method="post" enctype="multipart/form-data">
+            <!-- Name input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <label class="form-label" for="form4Example1">Title</label>
+              <input type="text" id="title" name="title" class="form-control" />
+            </div>
+
+             <!-- Cover Image -->
+             <div data-mdb-input-init class="form-outline mb-4">
+                <label class="form-label" for="coverImage">Cover Image</label>
+              <input type="file" id="coverImage" name="coverImage" class="form-control" />
+            </div>
+            
+            <!-- Message input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <label class="form-label" for="form4Example3">Blog</label>
+              <textarea class="form-control" id="body" name="body" rows="10"></textarea>
+              
+            </div>
+          
+            <!-- Submit button -->
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+                Post
+            </button>
+          </form>
+    </div>
+    <%- include("./partials/script") %>
+  </body>
+</html>
